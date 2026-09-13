@@ -99,22 +99,25 @@ export const userRelations = relations(user, ({ many }) => ({
   accounts: many(account),
 }));
 
-// ─── Your tables go below this line ───────────────────────────────────────────
-//
-// Example — delete it once you have real tables of your own:
-//
-// export const note = pgTable(
-//   "note",
-//   {
-//     id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-//     userId: text("user_id")
-//       .notNull()
-//       .references(() => user.id, { onDelete: "cascade" }),
-//     title: text("title").notNull(),
-//     body: text("body").notNull().default(""),
-//     createdAt: timestamp("created_at").notNull().defaultNow(),
-//   },
-//   // Index the column you filter by. Every query for a user's own rows filters
-//   // on user_id, and without this each one is a full table scan.
-//   (t) => [index("note_user_idx").on(t.userId)],
-// );
+// ─── Inquiry records ─────────────────────────────────────────────────────────
+
+export const inquiries = pgTable(
+  "inquiries",
+  {
+    id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+    inquiryType: text("inquiry_type").notNull(),
+    source: text("source").notNull(),
+    name: text("name").notNull(),
+    phone: text("phone").notNull().default(""),
+    email: text("email").notNull(),
+    message: text("message").notNull().default(""),
+    details: text("details").notNull().default("{}"),
+    status: text("status").notNull().default("new"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (t) => [
+    index("inquiries_status_idx").on(t.status),
+    index("inquiries_created_at_idx").on(t.createdAt),
+  ],
+);

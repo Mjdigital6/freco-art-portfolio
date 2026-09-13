@@ -1,5 +1,6 @@
 "use server";
 
+import { createInquiry } from "@/lib/inquiries";
 import { sendEmailOrThrow } from "@/lib/email";
 
 const recipient = "frecoartdevelopers@gmail.com";
@@ -48,6 +49,7 @@ export async function submitContactInquiry(
     return { status: "error", message: "Please enter a valid email address so we can reply to you." };
   }
 
+  const details = { enquiryType, name, phone, email, message, pageSource: valueOf(formData, "pageSource") };
   const html = `
     <h2>New FRECO ART enquiry</h2>
     <p><strong>Enquiry type:</strong> ${escapeHtml(enquiryType)}</p>
@@ -59,6 +61,20 @@ export async function submitContactInquiry(
   `;
 
   try {
+    await createInquiry({
+      inquiryType: enquiryType,
+      source: "contact",
+      name,
+      phone,
+      email,
+      message,
+      details,
+    });
+  } catch {
+    return { status: "error", message: "We could not save your enquiry just now. Please try again in a moment." };
+  }
+
+  try {
     await sendEmailOrThrow({
       to: recipient,
       subject: safeSubject(`[FRECO ART] ${enquiryType} — ${name}`),
@@ -68,6 +84,6 @@ export async function submitContactInquiry(
     });
     return { status: "success", message: "Your enquiry has been sent. We will get in touch through the details you provided." };
   } catch {
-    return { status: "error", message: "We could not send your enquiry just now. Please try again in a moment." };
+    return { status: "error", message: "Your enquiry was saved, but the email notification could not be sent just now. It is still available in the admin workspace." };
   }
 }
