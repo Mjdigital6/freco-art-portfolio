@@ -84,9 +84,6 @@ export function FrecoHomeExperience() {
               <div className="mt-9 flex flex-wrap items-center gap-4"><Button render={<Link href="/developments" />} data-pointer className="h-12 rounded-full bg-white px-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary hover:bg-white/90">Explore developments <ArrowUpRight size={15} /></Button><Link href="#method" data-pointer className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-white">See how we work <ArrowDown size={15} /></Link></div>
             </div>
 
-            <div className="relative ml-auto min-w-0 w-full max-w-[390px] lg:mb-4">
-              <Image src="/freco-art-logo-transparent.png" alt="FRECO ART LTD" width={464} height={459} className="h-auto w-full max-w-[320px] object-contain object-left" sizes="(max-width: 1024px) 80vw, 320px" />
-            </div>
           </div>
           <div className="mt-10 flex items-center justify-between border-t border-white/15 pt-5 text-[10px] uppercase tracking-[0.17em] text-white/45"><span>Land · Strategy · Partnership · Development · Value</span><span className="hidden items-center gap-2 sm:inline-flex"><Compass size={14} /> Move through the field</span></div>
         </div>
