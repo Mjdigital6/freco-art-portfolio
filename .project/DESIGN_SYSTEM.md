@@ -1,30 +1,26 @@
-<!-- OWNER: Design / Build · READERS: Build, Landing, SEO -->
 # Design System
 
-The **committed** visual direction. Build / Landing / Design MUST follow this so the
-product stays consistent. Change it deliberately, and commit the change.
-
 ## Direction
-{{one-line aesthetic — e.g. "clean editorial, trust-blue, generous whitespace"}}
+Architectural field notes: white space, deep development green, charcoal contrast, oversized editorial type and precise hairline grids.
 
 ## Palette
 | Token | Value |
 |-------|-------|
-| background | {{#fff}} |
-| surface | {{}} |
-| text / muted | {{}} |
-| border | {{}} |
-| primary | {{}} |
-| accent | {{}} |
-| success / warning / danger | {{}} |
+| background | #fbfbf8 |
+| surface | #ffffff |
+| text / muted | #19211c / #68736c |
+| border | #dbe2dc |
+| primary | #174b35 |
+| accent | #d5e6d9 |
+| success / warning / danger | #174b35 / #9b6b2f / #a64a38 |
 
 ## Typography
-- Headings: {{font}}
-- Body: {{font}}
+- Headings: Arial, Helvetica, sans-serif with tight display tracking
+- Body: Arial, Helvetica, sans-serif
 
 ## Tokens & primitives
-- Radius / shadow / spacing rhythm: {{}}
-- Shared components: {{Button, Card, Input, …}}
+- Small-radius editorial blocks, thin borders, deep green action surfaces, no decorative gradients.
+- Shared components: Button, project cards, insight cards, form shell, filter pills, page intro, callout, footer and mobile navigation.
 
 ## Voice & tone
-{{how the product speaks — e.g. "plain, confident, no hype"}}
+Plain, confident and strategic. No hype, guarantees or invented proof.

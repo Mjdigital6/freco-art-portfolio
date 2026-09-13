@@ -1,22 +1,27 @@
-<!-- OWNER: Build (with the user) · READERS: every agent · READ THIS FIRST -->
-# {{PROJECT_NAME}}
+# FRECO ART LTD
 
-**One-liner:** {{what it is, in one sentence}}
+**One-liner:** A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate.
 
 ## Goal
-{{the outcome the user actually wants}}
+Create a premium digital platform that attracts landowners, property buyers, investors and strategic partners into a clear development conversation.
 
 ## Target users
-{{who it's for}}
+Landowners, property buyers, investors, diaspora buyers and strategic development partners in Kenya.
 
 ## Status
-- Stage: {{idea | building | live}}
-- Live URL: {{url or —}}
-- Repo: {{repo or —}}
+- Stage: building
+- Live URL: —
+- Repo: —
 
 ## What exists today
-<!-- Kept current by the Build agent after each build -->
-{{high-level list of built features}}
+- Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths.
+- About, developments, project detail, landowners, investors, insights, article detail and contact routes.
+- Editable local project and insight data structures with clearly marked placeholder content.
+- Local-only multi-step land submission, investor interest and contact enquiry flows.
+- Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations.
+- Supplied FRECO ART logo and generated architectural visuals included in the experience.
 
 ## Constraints / must-nots
-{{anything every agent must respect — brand rules, no-gos, tech limits}}
+- Do not invent project facts, contact details, testimonials, awards, returns or partnerships.
+- Keep the brand positioned as strategic property development, not brokerage or plot selling.
+- Local-only data for now; forms are ready to connect to a CRM, email workflow or database later.

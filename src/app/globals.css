@@ -4,51 +4,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--background);
-  color: var(--foreground);
-}
-
-body {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; background: var(--background); color: var(--foreground); }
+body { font-family: var(--font-sans); font-size: 16px; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
-  /* Real beziers behind the easing utilities — see the :root block below. */
   --ease-out: var(--ease-out);
   --ease-in-out: var(--ease-in-out);
   --ease-in: var(--ease-in);
@@ -80,124 +49,72 @@ textarea {
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ─── THE TOKEN BLOCK ─────────────────────────────────────────────────────────
-   This is the single place colours, radius and fonts are defined, and the block the
-   design skill rewrites with the committed palette (or the chosen look's palette).
-   Every shadcn component in src/components/ui reads these names, so keep the NAMES
-   and change the VALUES. Dark mode re-tunes the same names in `.dark` below — never
-   a naive inversion.
-
-   NEVER add a second `:root` block: whichever comes last in this file wins, so a
-   duplicate silently overrides the design you just committed.
-
-   FONTS: `next/font/google` is banned — the build sandbox has no Google egress, so the
-   fetch hangs at compile and the preview renders blank. Carry personality with weight,
-   size and tracking, or self-host a .woff2 via `next/font/local`.
-   ──────────────────────────────────────────────────────────────────────────── */
 :root {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  /* Motion curves. CSS's own `ease-out`/`ease-in-out` keywords are weak, mushy
-     curves and are the usual reason motion feels cheap — these replace them, so
-     the `ease-out` / `ease-in-out` / `ease-in` Tailwind utilities emit real
-     beziers. Same names in every project; retune the values, not the names.
-       ease-out      quiet product default — no overshoot
-       ease-in-out   symmetrical, for anything that reverses
-       ease-in       EXITS only (an entrance that starts slow feels broken)
-       ease-out-expo marketing/brand surfaces — fast out, long tail */
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "Courier New", monospace;
+  --background: #fbfbf8;
+  --foreground: #19211c;
+  --card: #ffffff;
+  --card-foreground: #19211c;
+  --popover: #ffffff;
+  --popover-foreground: #19211c;
+  --primary: #174b35;
+  --primary-foreground: #ffffff;
+  --secondary: #e8efe9;
+  --secondary-foreground: #174b35;
+  --muted: #eef1ed;
+  --muted-foreground: #68736c;
+  --accent: #d5e6d9;
+  --accent-foreground: #174b35;
+  --destructive: #a64a38;
+  --border: #dbe2dc;
+  --input: #dbe2dc;
+  --ring: #174b35;
+  --chart-1: #174b35;
+  --chart-2: #618b6a;
+  --chart-3: #9cb8a0;
+  --chart-4: #c5d8c6;
+  --chart-5: #27372d;
+  --radius: 0.15rem;
   --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out-expo: cubic-bezier(0.23, 1, 0.32, 1);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #f2f5f1;
+  --sidebar-foreground: #19211c;
+  --sidebar-primary: #174b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8efe9;
+  --sidebar-accent-foreground: #174b35;
+  --sidebar-border: #dbe2dc;
+  --sidebar-ring: #174b35;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+.dark { --background: #15231a; --foreground: #f6f7f2; --card: #1b2c21; --card-foreground: #f6f7f2; --popover: #1b2c21; --popover-foreground: #f6f7f2; --primary: #9ec5a7; --primary-foreground: #15231a; --secondary: #253a2b; --secondary-foreground: #f6f7f2; --muted: #253a2b; --muted-foreground: #b3c3b5; --accent: #304a36; --accent-foreground: #f6f7f2; --destructive: #d57d67; --border: #ffffff1c; --input: #ffffff24; --ring: #9ec5a7; --sidebar: #1b2c21; --sidebar-foreground: #f6f7f2; --sidebar-primary: #9ec5a7; --sidebar-primary-foreground: #15231a; --sidebar-accent: #253a2b; --sidebar-accent-foreground: #f6f7f2; --sidebar-border: #ffffff1c; --sidebar-ring: #9ec5a7; }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { @apply font-sans; }
+}
+
+@layer utilities {
+  .bg-ink { background-color: #14231a; }
+  .bg-sand { background-color: #f1f2ec; }
+  .text-ink { color: #14231a; }
+  .eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .nav-link { position: relative; }
+  .nav-link::after { position: absolute; bottom: -0.6rem; left: 0; width: 0; height: 1px; content: ""; background: currentColor; transition: width 300ms var(--ease-out); }
+  .nav-link:hover::after { width: 100%; }
+  .display-title { text-wrap: balance; }
 }

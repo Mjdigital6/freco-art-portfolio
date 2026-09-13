@@ -1,33 +1,18 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { siteUrl } from "@/lib/site";
 
-// You MAY adjust the metadata and add fonts to match your design.
-// NEVER next/font/google — the build sandbox has no Google egress, so the fetch
-// hangs at compile and the preview renders blank. Use the zero-network stack in
-// globals.css, or self-host a .woff2 via next/font/local.
-export const metadata: Metadata = {
-  title: "App",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = await siteUrl();
+  return {
+    metadataBase: new URL(baseUrl),
+    title: { default: "FRECO ART LTD — Turning Land Into Opportunity", template: "%s — FRECO ART LTD" },
+    description: "FRECO ART identifies strategically positioned land, creates development partnerships and transforms opportunity into purposeful real estate in Kenya.",
+    openGraph: { title: "FRECO ART LTD — Turning Land Into Opportunity", description: "Strategic property development, landowner partnerships and purposeful real estate in Kenya.", type: "website", images: [{ url: "/freco-hero.webp", width: 1600, height: 900, alt: "FRECO ART property development landscape" }] },
+  };
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body className="min-h-dvh antialiased">
-        {children}
-        {/* Imagine Make preview runtime — only active when framed by the editor. */}
-        <Script
-          src="https://cdn-chatly.vyro.ai/chatly-make/sites-script/make-preview-runtime.js"
-          strategy="afterInteractive"
-        />
-        {/* Imagine preview heading override — only active when framed. */}
-        <Script
-          src="https://cdn-chatly.vyro.ai/chatly-make/sites-script/heading-override.js"
-          strategy="afterInteractive"
-        />
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body className="min-h-dvh antialiased">{children}<Script src="https://cdn-chatly.vyro.ai/chatly-make/sites-script/make-preview-runtime.js" strategy="afterInteractive" /><Script src="https://cdn-chatly.vyro.ai/chatly-make/sites-script/heading-override.js" strategy="afterInteractive" /></body></html>;
 }
