@@ -118,3 +118,13 @@ button, input, select, textarea { font: inherit; }
   .nav-link:hover::after { width: 100%; }
   .display-title { text-wrap: balance; }
 }
+   .display-title { text-wrap: balance; }
++  .site-pointer { position: fixed; z-index: 80; top: 0; left: 0; width: 18px; height: 18px; pointer-events: none; border: 1px solid color-mix(in srgb, var(--primary) 65%, transparent); border-radius: 999px; opacity: 0; transform: translate3d(-100px, -100px, 0); transition: opacity 250ms var(--ease-out), width 300ms var(--ease-out), height 300ms var(--ease-out), background-color 300ms var(--ease-out), border-color 300ms var(--ease-out); }
++  .site-pointer span { position: absolute; inset: 6px; border-radius: 999px; background: var(--primary); }
++  .site-pointer[data-active="true"] { width: 42px; height: 42px; border-color: color-mix(in srgb, var(--primary) 85%, transparent); background: color-mix(in srgb, var(--accent) 48%, transparent); }
++  .site-pointer[data-active="true"] span { inset: 16px; }
++  .scroll-meter { position: fixed; z-index: 81; top: 0; left: 0; height: 2px; width: var(--scroll-progress, 0%); background: var(--primary); transform-origin: left; }
++  .brand-plate { transform: rotate(1.2deg); transition: transform 700ms var(--ease-out), box-shadow 700ms var(--ease-out); }
++  .brand-plate:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 24px 48px color-mix(in srgb, var(--primary) 22%, transparent); }
++  @media (pointer: fine) { body { cursor: none; } a, button { cursor: none; } .site-pointer { opacity: 1; } }
++  @media (prefers-reduced-motion: reduce) { .site-pointer, .brand-plate, .site-pointer[data-active="true"] { transition: none; } .brand-plate { transform: none; } }

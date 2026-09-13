@@ -24,3 +24,6 @@ Architectural field notes: white space, deep development green, charcoal contras
 
 ## Voice & tone
 Plain, confident and strategic. No hype, guarantees or invented proof.
+
+## Motion
+Use restrained field-note interactions: scroll progress, active pointers, gentle image movement and deliberate state changes. Respect reduced-motion preferences and keep motion in service of orientation.

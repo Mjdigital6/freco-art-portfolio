@@ -25,3 +25,5 @@ Landowners, property buyers, investors, diaspora buyers and strategic developmen
 - Do not invent project facts, contact details, testimonials, awards, returns or partnerships.
 - Keep the brand positioned as strategic property development, not brokerage or plot selling.
 - Local-only data for now; forms are ready to connect to a CRM, email workflow or database later.
+- Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths.
++ Premium responsive homepage with the supplied FRECO ART logo, field-note motion cues, development categories, FRECO method, ethical operating principles and clear landowner/investor conversion paths.
