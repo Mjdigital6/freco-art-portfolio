@@ -84,7 +84,7 @@ export function FrecoHomeExperience() {
               <div className="mt-9 flex flex-wrap items-center gap-4"><Button render={<Link href="/developments" />} data-pointer className="h-12 rounded-full bg-white px-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary hover:bg-white/90">Explore developments <ArrowUpRight size={15} /></Button><Link href="#method" data-pointer className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-white">See how we work <ArrowDown size={15} /></Link></div>
             </div>
 
-            <div className="relative ml-auto min-w-0 w-full max-w-[390px] lg:mb-4">
+            <div className="relative ml-auto min-w-0 w-full lg:w-[calc(100%-8px)] max-w-[390px] lg:mb-4">
               <div className="brand-plate relative overflow-hidden bg-white p-5 text-ink shadow-2xl shadow-black/20">
                 <div className="flex items-center justify-between border-b border-black/10 pb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/45"><span className="min-w-0 truncate">FRECO ART / FIELD MARK</span><span className="shrink-0">01—26</span></div>
                 <div className="relative mt-4 aspect-[1.8/1] overflow-hidden bg-background"><Image src="/freco-art-logo-user.jpg" alt="FRECO ART LTD logo" fill className="object-cover object-center" sizes="390px" /></div>
