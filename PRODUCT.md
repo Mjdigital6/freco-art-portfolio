@@ -1,30 +1,49 @@
 <!-- Generated from .project/PROJECT.md by the engine — do not run `impeccable init`, which would interview a user who isn't here. Edit .project/PROJECT.md; this file is regenerated from it. -->
-# workspace
+# FRECO ART LTD
 
 **Platform:** Responsive web — Next.js, React, Tailwind. shadcn/ui and lucide are installed and available; the direction decides whether they fit or whether this surface needs its own vocabulary.
 **Task mode:** Operate (pass as `--mode operate` to any script)
 
+## What this is
+
+A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate.
+
+## What it enables
+
+Create a premium digital platform that attracts landowners, property buyers, investors and strategic partners into a clear development conversation.
+
+## Primary user
+
+Landowners, property buyers, investors, diaspora buyers and strategic development partners in Kenya.
+
+## What exists today
+
+Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
+
 ## Brand commitments & durable constraints
 
-- **The user is present and IS choosing the visual direction.** Offer six materially different grounded directions through the design-picker command and STOP; the answer arrives as your next input and the chosen direction is then pinned, exactly as if the user had named it. Do not build a direction before asking, do not narrow the six to a favourite, and do not ask about anything else in the same breath — this one decision is the whole card.
-- **Ask ONLY when the direction is genuinely open**: this project has no committed visual world yet, or the user asked to redesign the whole app. A later change inside a committed world inherits it — asking again there is an interruption, not a courtesy.
-- **The roll decides which six you show, never which one wins.** Order your grounded directions by resonance, then use the assignment to pick the spread you present, so the lineup is not your own top six. Showing your favourites is the failure this whole mechanism exists to prevent.
-- **All six options ARE dealt challengers — every one, and nothing else.** Do not put your own grounded directions on the card, do not invent a seventh world, and do not reword a challenger into something safer. Your derivation still matters: it is how you FUSE the world the user picks with this product. It just does not get to decide the menu.
-- **Deal THREE rolls, then show the six that can carry this product.** Run the concept-seed command three times and pool every challenger it deals (about eighteen worlds). Drop the ones that cannot hold this product's actual task — a world whose grammar has nowhere to put the main thing the user does here is out, however beautiful its board. Keep the six strongest of what survives.
-- **Fitness is the filter, never taste.** "Can this world's own grammar carry capture, or a list, or a form, or whatever this product mainly does?" is the question. "Would I have picked this?" is not, and a lineup of the six calmest worlds is the ranking rut wearing fitness as a disguise. A striking world that genuinely fuses beats a tame one every time.
-- **The six must span at least THREE different material families.** Paper, ink and stationery are ONE family. If your surviving six are all screens, or all paper, you filtered by familiarity rather than by fit — go back to the pool.
-- **Every option carries that challenger's QUALITY BAR *board* URL as `preview_image`, verbatim.** An option without one is dropped by the command, because the board is the only proof the world came from the roll. Six worlds, six boards. If the roll dealt fewer than six, show what it dealt.
-- **Never generate images for the card.** The catalog already ships the artwork, and rendering sketches would make the user sit and wait to answer a question about which world — not which composition.
-- **Also give every option a `swatch`** of the real colours you would build that world in, plus ONE plain sentence saying what this world does for THIS product — "a control-room rhythm for capturing thoughts fast" tells them something; listing the ground colour twice does not. The card already labels the board as a reference, so never spend the sentence saying that: "reference world, not a mockup" inside the description is wasted words on every card.
+Do not invent project facts, contact details, testimonials, awards, returns or partnerships. - Keep the brand positioned as strategic property development, not brokerage or plot selling. - Local-only data for now; forms are ready to connect to a CRM, email workflow or database later.
+
+- **This project already HAS a committed visual world — do NOT offer a design picker.** `.project/DESIGN_SYSTEM.md` records a direction someone decided on, and the code, tokens and components are built around it. Read it, inherit it, and make the requested change inside it. Dealing six alternative worlds here offers to throw away a working design system nobody asked you to replace.
+- **Tailoring is not redesigning.** "Make it about my business", new copy, a different logo, swapped imagery, a brand colour — all of that lands INSIDE the committed world. Change what was asked for and leave the direction alone.
+- **The one exception is an explicit, whole-app redesign** — the user asking for a different look outright, not merely a change that happens to be large. Then the direction is open again and the picker applies. When they name the new direction themselves, that is the decision: pin it and build, still without a picker.
 - The user's own words always outrank the roll. A direction, palette, face or reference they named is pinned; the roll only decides what they left open.
 - Two review rounds is the budget, then ship and report open items honestly under the reviewer's own verdict — never announce a table with open findings as a pass.
 - Web fonts load through Fontsource, never `next/font/google` — this sandbox has no Google egress, so the fetch hangs at compile and the preview renders blank.
 - No AI-builder badge, watermark, or attribution anywhere in the product.
 - Decisions recorded in `.project/` (ledger, DESIGN_SYSTEM.md) are commitments; contradict one only when the user asks.
 
+## Positioning
+
+A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate.
+
 ## Operating Context
 
 Responsive web, built unattended in one pass. Task mode: Operate.
+
+## Evidence on Hand
+
+Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
 
 ## Product Principles
 
