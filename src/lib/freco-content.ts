@@ -66,7 +66,7 @@ export const projects: Project[] = [
     opportunity:
       "This editable project record demonstrates how a strategically positioned parcel can be translated into a considered residential neighbourhood. Replace the concept content with verified project information when ready.",
     featuredImage: "/freco-residential.webp",
-    gallery: ["/freco-residential.webp", "/freco-hero.webp"],
+    gallery: ["/freco-residential.webp", "/freco-hero.webp", "/freco-apartments.webp", "/freco-commercial.webp"],
     scale: "Project information to be provided",
     amenities: ["Landscape-led planning", "Community spaces", "Project information to be provided"],
     featured: true,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     opportunity:
       "Use this space to explain why the location, access and intended resident experience make the opportunity meaningful. No project claims are made until the facts are supplied.",
     featuredImage: "/freco-apartments.webp",
-    gallery: ["/freco-apartments.webp", "/freco-commercial.webp"],
+    gallery: ["/freco-apartments.webp", "/freco-commercial.webp", "/freco-residential.webp", "/freco-hero.webp"],
     scale: "Project information to be provided",
     amenities: ["Contemporary urban living", "Shared green space", "Project information to be provided"],
     featured: true,
@@ -100,10 +100,44 @@ export const projects: Project[] = [
     opportunity:
       "When the verified development brief is available, this section becomes the narrative layer for the location, market and community opportunity behind the project.",
     featuredImage: "/freco-commercial.webp",
-    gallery: ["/freco-commercial.webp", "/freco-apartments.webp"],
+    gallery: ["/freco-commercial.webp", "/freco-apartments.webp", "/freco-hero.webp", "/freco-residential.webp"],
     scale: "Project information to be provided",
     amenities: ["Mixed-use planning", "Public-facing spaces", "Project information to be provided"],
     featured: true,
+  },
+  {
+    id: "project-04",
+    slug: "diaspora-jenga-home",
+    name: "Diaspora Jenga Home",
+    location: "Location to be provided",
+    category: "Residential",
+    status: "Concept",
+    description:
+      "A placeholder concept for a diaspora-focused home development conversation, created as a foundation for verified information about place, delivery and partnership.",
+    opportunity:
+      "This concept gives diaspora buyers and development partners a clear place to follow the conversation. Project facts, location, timelines and commercial terms will be added only when verified.",
+    featuredImage: "/freco-hero.webp",
+    gallery: ["/freco-hero.webp", "/freco-residential.webp", "/freco-apartments.webp", "/freco-commercial.webp"],
+    scale: "Project information to be provided",
+    amenities: ["Diaspora buyer perspective", "Home development concept", "Project information to be provided"],
+    featured: true,
+  },
+  {
+    id: "project-05",
+    slug: "gated-community-concept",
+    name: "Gated Community Concept",
+    location: "Location to be provided",
+    category: "Gated communities",
+    status: "Pipeline",
+    description:
+      "A placeholder concept for a future gated community shaped by context, shared space and a clear development brief.",
+    opportunity:
+      "This editable record is ready for the verified site, audience, planning direction and partnership structure that will define the opportunity.",
+    featuredImage: "/freco-residential.webp",
+    gallery: ["/freco-residential.webp", "/freco-apartments.webp", "/freco-commercial.webp", "/freco-hero.webp"],
+    scale: "Project information to be provided",
+    amenities: ["Community planning", "Shared spaces", "Project information to be provided"],
+    featured: false,
   },
 ];
 
