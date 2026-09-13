@@ -4,10 +4,6 @@
 **Platform:** Responsive web — Next.js, React, Tailwind. shadcn/ui and lucide are installed and available; the direction decides whether they fit or whether this surface needs its own vocabulary.
 **Task mode:** Operate (pass as `--mode operate` to any script)
 
-## What this is
-
-RERENDER THIS LOGO IN HIGH QUALITY AND RENDER IT IN PNG AND PDF FINE EDGES SHARP AND 4K
-
 ## Brand commitments & durable constraints
 
 - **The user is present and IS choosing the visual direction.** Offer six materially different grounded directions through the design-picker command and STOP; the answer arrives as your next input and the chosen direction is then pinned, exactly as if the user had named it. Do not build a direction before asking, do not narrow the six to a favourite, and do not ask about anything else in the same breath — this one decision is the whole card.
@@ -25,10 +21,6 @@ RERENDER THIS LOGO IN HIGH QUALITY AND RENDER IT IN PNG AND PDF FINE EDGES SHARP
 - Web fonts load through Fontsource, never `next/font/google` — this sandbox has no Google egress, so the fetch hangs at compile and the preview renders blank.
 - No AI-builder badge, watermark, or attribution anywhere in the product.
 - Decisions recorded in `.project/` (ledger, DESIGN_SYSTEM.md) are commitments; contradict one only when the user asks.
-
-## Positioning
-
-RERENDER THIS LOGO IN HIGH QUALITY AND RENDER IT IN PNG AND PDF FINE EDGES SHARP AND 4K
 
 ## Operating Context
 

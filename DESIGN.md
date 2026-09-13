@@ -1,6 +1,5 @@
 ---
 name: "workspace"
-description: "RERENDER THIS LOGO IN HIGH QUALITY AND RENDER IT IN PNG AND PDF FINE EDGES SHARP AND 4K"
 typography:
   mono:
     fontFamily: "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace"
