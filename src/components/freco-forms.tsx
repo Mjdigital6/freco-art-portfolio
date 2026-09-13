@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useActionState, useState } from "react";
+import { submitContactInquiry } from "@/app/contact/actions";
 import { FormShell, FormSuccess, Field, PrimaryFormButton, TextareaField } from "@/components/freco-content";
 import { SelectArrow } from "@/components/freco-site";
 
@@ -20,9 +21,13 @@ export function InvestorForm() {
   return <FormShell title="Register your interest" description="Tell us what you would like to understand about future development opportunities."><form onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }} className="space-y-7"><FormGrid><Field label="Name" name="name" placeholder="Your name" /><Field label="Phone" name="phone" type="tel" placeholder="Your phone number" /><Field label="Email" name="email" type="email" placeholder="you@example.com" /><Field label="Preferred location" name="location" placeholder="Location or area" /></FormGrid><label className="relative block"><span className="eyebrow text-muted-foreground">Investment interest *</span><select required name="investmentInterest" className="mt-3 h-12 w-full appearance-none border-b border-border bg-transparent px-0 text-sm outline-none focus:border-primary"><option value="">Select an option</option><option>Residential development</option><option>Apartments</option><option>Commercial or mixed use</option><option>General opportunity</option></select><SelectArrow /></label><TextareaField label="Message" name="message" placeholder="What would you like to explore?" /><PrimaryFormButton label="Register interest" /></form></FormShell>;
 }
 
+const contactInitialState = { status: "idle" as const, message: "" };
+
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
   const [type, setType] = useState("");
-  if (submitted) return <FormSuccess title="Thank you. Your enquiry has been received." copy="We will get in touch through the contact details provided." />;
-  return <FormShell title="Start the conversation" description="Choose the path that best matches your enquiry and tell us what you want to explore."><form onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }} className="space-y-7"><label className="relative block"><span className="eyebrow text-muted-foreground">Enquiry type *</span><select required value={type} onChange={(event) => setType(event.target.value)} name="enquiryType" className="mt-3 h-12 w-full appearance-none border-b border-border bg-transparent px-0 text-sm outline-none focus:border-primary"><option value="">Select an option</option><option>Landowner partnership</option><option>Investment opportunity</option><option>Property enquiry</option><option>Strategic partnership</option><option>General enquiry</option></select><SelectArrow /></label><FormGrid><Field label="Name" name="name" placeholder="Your name" /><Field label="Phone" name="phone" type="tel" placeholder="Your phone number" /><Field label="Email" name="email" type="email" placeholder="you@example.com" /></FormGrid><TextareaField label="Message" name="message" placeholder="Tell us what you want to explore." /><input type="hidden" name="pageSource" value="contact" /><PrimaryFormButton label="Submit enquiry" /></form></FormShell>;
+  const [state, formAction, pending] = useActionState(submitContactInquiry, contactInitialState);
+
+  if (state.status === "success") return <FormSuccess title="Thank you. Your enquiry has been sent." copy={state.message} />;
+
+  return <FormShell title="Start the conversation" description="Choose the path that best matches your enquiry and tell us what you want to explore."><form action={formAction} className="space-y-7"><label className="relative block"><span className="eyebrow text-muted-foreground">Enquiry type *</span><select required value={type} onChange={(event) => setType(event.target.value)} name="enquiryType" className="mt-3 h-12 w-full appearance-none border-b border-border bg-transparent px-0 text-sm outline-none focus:border-primary"><option value="">Select an option</option><option>Landowner partnership</option><option>Investment opportunity</option><option>Property enquiry</option><option>Strategic partnership</option><option>General enquiry</option></select><SelectArrow /></label><FormGrid><Field label="Name" name="name" placeholder="Your name" /><Field label="Phone" name="phone" type="tel" placeholder="Your phone number" /><Field label="Email" name="email" type="email" placeholder="you@example.com" /></FormGrid><TextareaField label="Message" name="message" placeholder="Tell us what you want to explore." /><input type="hidden" name="pageSource" value="contact" />{state.status === "error" ? <p role="alert" className="border border-destructive/25 bg-destructive/5 p-4 text-sm leading-6 text-destructive">{state.message}</p> : null}<PrimaryFormButton label={pending ? "Sending enquiry…" : "Submit enquiry"} /></form></FormShell>;
 }
