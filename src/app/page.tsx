@@ -1,10 +1,16 @@
-// Placeholder home page — REPLACE this with the app you were asked to build.
-// The surrounding scaffolding (layout, badge, SEO, config, deps) is already in
-// place, so you only need to build the app-specific pages and components.
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="flex min-h-dvh items-center justify-center">
-      <p className="text-sm text-black/40">Starting your app…</p>
+    <main className="flex min-h-dvh items-center justify-center px-6 py-12">
+      <Image
+        src="/freco-art-logo-4k.png"
+        alt="Freco Art LTD logo"
+        width={3840}
+        height={2096}
+        priority
+        className="h-auto w-full max-w-5xl"
+      />
     </main>
   );
 }
