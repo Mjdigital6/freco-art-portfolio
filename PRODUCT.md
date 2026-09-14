@@ -6,7 +6,7 @@
 
 ## What this is
 
-A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate.
+A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate, with a private owner desk for keeping the public story current.
 
 ## What it enables
 
@@ -18,11 +18,11 @@ Landowners, property buyers, investors, diaspora buyers and strategic developmen
 
 ## What exists today
 
-Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
+Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Private owner-only workspace at `/admin` protected by the approved business email. - Private editing desk for development records and insight articles, with saved changes reflected on public pages. - Enquiry inbox with status updates and deletion controls. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
 
 ## Brand commitments & durable constraints
 
-Do not invent project facts, contact details, testimonials, awards, returns or partnerships. - Keep the brand positioned as strategic property development, not brokerage or plot selling. - Local-only data for now; forms are ready to connect to a CRM, email workflow or database later. - Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. + Premium responsive homepage with the supplied FRECO ART logo, field-note motion cues, development categories, FRECO method, ethical operating principles and clear landowner/investor conversion paths.
+Do not invent project facts, contact details, testimonials, awards, returns or partnerships. - Keep the brand positioned as strategic property development, not brokerage or plot selling. - Private content changes are limited to the approved business account. - Premium responsive homepage with the supplied FRECO ART logo, field-note motion cues, development categories, FRECO method, ethical operating principles and clear landowner/investor conversion paths.
 
 - **This project already HAS a committed visual world — do NOT offer a design picker.** `.project/DESIGN_SYSTEM.md` records a direction someone decided on, and the code, tokens and components are built around it. Read it, inherit it, and make the requested change inside it. Dealing six alternative worlds here offers to throw away a working design system nobody asked you to replace.
 - **Tailoring is not redesigning.** "Make it about my business", new copy, a different logo, swapped imagery, a brand colour — all of that lands INSIDE the committed world. Change what was asked for and leave the direction alone.
@@ -35,7 +35,7 @@ Do not invent project facts, contact details, testimonials, awards, returns or p
 
 ## Positioning
 
-A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate.
+A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate, with a private owner desk for keeping the public story current.
 
 ## Operating Context
 
@@ -43,7 +43,7 @@ Responsive web, built unattended in one pass. Task mode: Operate.
 
 ## Evidence on Hand
 
-Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
+Premium responsive homepage with the brand story, development categories, FRECO method, landowner and investor conversion paths. - About, developments, project detail, landowners, investors, insights, article detail and contact routes. - Private owner-only workspace at `/admin` protected by the approved business email. - Private editing desk for development records and insight articles, with saved changes reflected on public pages. - Enquiry inbox with status updates and deletion controls. - Editable local project and insight data structures with clearly marked placeholder content. - Local-only multi-step land submission, investor interest and contact enquiry flows. - Responsive navigation, mobile menu, footer, filters, search, image-led project cards and SEO-ready metadata foundations. - Supplied FRECO ART logo and generated architectural visuals included in the experience.
 
 ## Product Principles
 

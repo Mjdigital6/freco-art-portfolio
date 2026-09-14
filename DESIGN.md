@@ -1,6 +1,6 @@
 ---
 name: "FRECO ART LTD"
-description: "A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate."
+description: "A strategic Kenyan property development company turning land into opportunity through partnerships and purposeful real estate, with a private owner desk for keeping the public story current."
 colors:
   background: "#fbfbf8"
   foreground: "#19211c"
@@ -44,7 +44,7 @@ rounded:
 
 ## Overview
 
-Architectural field notes: white space, deep development green, charcoal contrast, oversized editorial type and precise hairline grids.
+Architectural field notes: white space, deep development green, charcoal contrast, oversized editorial type and precise hairline grids. The private owner desk extends this into a focused content workspace with clear editing controls, narrow reading columns and strong saved-state feedback.
 
 ## Colors
 
@@ -71,7 +71,7 @@ Declared in `globals.css` as `--color-*` and mirrored in the frontmatter. Use th
 ## Layout
 
 - Small-radius editorial blocks, thin borders, deep green action surfaces, no decorative gradients.
-- Shared components: Button, project cards, insight cards, form shell, filter pills, page intro, callout, footer and mobile navigation.
+- Shared components: Button, project cards, insight cards, form shell, filter pills, page intro, callout, footer, mobile navigation and owner content editor.
 
 ## Shapes
 
