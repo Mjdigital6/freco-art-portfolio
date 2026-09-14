@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/freco-content";
 
 export function Wordmark({ inverted = false }: { inverted?: boolean }) {
-  return <Link href="/" className={`group inline-flex items-center gap-3 ${inverted ? "text-white" : "text-foreground"}`}><span className="grid size-9 place-items-center rounded-full border border-current/30 text-[10px] font-semibold tracking-[0.2em] transition-transform duration-300 group-hover:rotate-12">FA</span><span className="leading-none"><span className="block text-[15px] font-semibold tracking-[0.22em]">FRECO ART</span><span className="mt-1 block text-[9px] tracking-[0.45em] opacity-60">LTD</span></span></Link>;
+  return <Link href="/" aria-label="FRECO ART LTD home" className={`group inline-flex items-center ${inverted ? "text-white" : "text-foreground"}`}><span className="flex h-16 w-[7.25rem] items-center justify-center rounded-sm bg-white/95 px-2 py-1 shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:-translate-y-0.5"><Image src="/freco-art-logo-transparent.png" alt="FRECO ART LTD" width={900} height={891} priority className="h-full w-full object-contain" /></span></Link>;
 }
 
 export function SiteHeader() {
