@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
-import { projects, insights } from "@/lib/freco-content";
+import { getInsights, getProjects } from "@/lib/site-content";
 import { siteUrl } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = await siteUrl();
+  const [projects, insights] = await Promise.all([getProjects(), getInsights()]);
   const routes = [
     { path: "/", changeFrequency: "weekly" as const, priority: 1 },
     { path: "/about", changeFrequency: "monthly" as const, priority: 0.8 },
@@ -16,10 +17,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...insights.map((insight) => ({ path: `/insights/${insight.slug}`, changeFrequency: "monthly" as const, priority: insight.featured ? 0.7 : 0.5 })),
   ];
 
-  return routes.map(({ path, changeFrequency, priority }) => ({
-    url: `${base}${path}`,
-    lastModified: new Date(),
-    changeFrequency,
-    priority,
-  }));
+  return routes.map(({ path, changeFrequency, priority }) => ({ url: `${base}${path}`, lastModified: new Date(), changeFrequency, priority }));
 }

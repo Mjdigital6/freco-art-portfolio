@@ -1,7 +1,7 @@
 # Design System
 
 ## Direction
-Architectural field notes: white space, deep development green, charcoal contrast, oversized editorial type and precise hairline grids.
+Architectural field notes: white space, deep development green, charcoal contrast, oversized editorial type and precise hairline grids. The private owner desk extends this into a focused content workspace with clear editing controls, narrow reading columns and strong saved-state feedback.
 
 ## Palette
 | Token | Value |
@@ -20,7 +20,7 @@ Architectural field notes: white space, deep development green, charcoal contras
 
 ## Tokens & primitives
 - Small-radius editorial blocks, thin borders, deep green action surfaces, no decorative gradients.
-- Shared components: Button, project cards, insight cards, form shell, filter pills, page intro, callout, footer and mobile navigation.
+- Shared components: Button, project cards, insight cards, form shell, filter pills, page intro, callout, footer, mobile navigation and owner content editor.
 
 ## Voice & tone
 Plain, confident and strategic. No hype, guarantees or invented proof.

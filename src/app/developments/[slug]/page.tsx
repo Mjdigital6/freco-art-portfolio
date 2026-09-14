@@ -7,26 +7,22 @@ import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo-json-ld";
 import { Callout, ImagePanel, SectionHeading, SiteFooter, SiteHeader } from "@/components/freco-site";
 import { ProjectCard } from "@/components/freco-content";
-import { projects } from "@/lib/freco-content";
+import { projects as defaultProjects } from "@/lib/freco-content";
+import { getProjects } from "@/lib/site-content";
 import { siteUrl } from "@/lib/site";
 
-export function generateStaticParams() { return projects.map((project) => ({ slug: project.slug })); }
+export function generateStaticParams() { return defaultProjects.map((project) => ({ slug: project.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const project = projects.find((item) => item.slug === slug);
+  const project = (await getProjects()).find((item) => item.slug === slug);
   if (!project) return {};
-  return {
-    title: `${project.name} | ${project.category} Development Concept`,
-    description: `${project.description} Explore the development concept, visual direction and current information for ${project.name}.`,
-    keywords: [project.name, `${project.category} development Kenya`, "Kenya property development", "FRECO ART"],
-    alternates: { canonical: `/developments/${project.slug}` },
-    openGraph: { type: "article", title: `${project.name} | FRECO ART LTD`, description: project.description, images: [{ url: project.featuredImage, alt: `${project.name} development concept` }] },
-  };
+  return { title: `${project.name} | ${project.category} Development Concept`, description: `${project.description} Explore the development concept, visual direction and current information for ${project.name}.`, keywords: [project.name, `${project.category} development Kenya`, "Kenya property development", "FRECO ART"], alternates: { canonical: `/developments/${project.slug}` }, openGraph: { type: "article", title: `${project.name} | FRECO ART LTD`, description: project.description, images: [{ url: project.featuredImage, alt: `${project.name} development concept` }] } };
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const projects = await getProjects();
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
   const related = projects.filter((item) => item.id !== project.id).slice(0, 2);

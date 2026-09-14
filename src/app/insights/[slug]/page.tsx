@@ -6,26 +6,22 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo-json-ld";
 import { Callout, SiteFooter, SiteHeader } from "@/components/freco-site";
 import { InsightCard } from "@/components/freco-content";
-import { insights } from "@/lib/freco-content";
+import { insights as defaultInsights } from "@/lib/freco-content";
+import { getInsights } from "@/lib/site-content";
 import { siteUrl } from "@/lib/site";
 
-export function generateStaticParams() { return insights.map((insight) => ({ slug: insight.slug })); }
+export function generateStaticParams() { return defaultInsights.map((insight) => ({ slug: insight.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const insight = insights.find((item) => item.slug === slug);
+  const insight = (await getInsights()).find((item) => item.slug === slug);
   if (!insight) return {};
-  return {
-    title: `${insight.title} | FRECO ART Insights`,
-    description: insight.excerpt,
-    keywords: [insight.title, `${insight.category} property Kenya`, "real estate insights Kenya", "FRECO ART"],
-    alternates: { canonical: `/insights/${insight.slug}` },
-    openGraph: { type: "article", title: `${insight.title} | FRECO ART LTD`, description: insight.excerpt, publishedTime: insight.date, authors: [insight.author], images: [{ url: insight.featuredImage, alt: insight.title }] },
-  };
+  return { title: `${insight.title} | FRECO ART Insights`, description: insight.excerpt, keywords: [insight.title, `${insight.category} property Kenya`, "real estate insights Kenya", "FRECO ART"], alternates: { canonical: `/insights/${insight.slug}` }, openGraph: { type: "article", title: `${insight.title} | FRECO ART LTD`, description: insight.excerpt, publishedTime: insight.date, authors: [insight.author], images: [{ url: insight.featuredImage, alt: insight.title }] } };
 }
 
 export default async function InsightPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const insights = await getInsights();
   const insight = insights.find((item) => item.slug === slug);
   if (!insight) notFound();
   const related = insights.filter((item) => item.id !== insight.id).slice(0, 2);

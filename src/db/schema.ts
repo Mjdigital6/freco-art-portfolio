@@ -121,3 +121,14 @@ export const inquiries = pgTable(
     index("inquiries_created_at_idx").on(t.createdAt),
   ],
 );
+
+// ─── Content overrides ────────────────────────────────────────────────────────
+
+export const contentOverrides = pgTable(
+  "content_overrides",
+  {
+    key: text("key").primaryKey(),
+    value: text("value").notNull(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+);
